@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-    private ArrayList<Card> cards;
+    private ArrayList<Card> cards; // List of cards in the deck
 
     public Deck() {
         cards = new ArrayList<>();
@@ -12,17 +12,17 @@ public class Deck {
 
         for (String suit : suits) {
             for (int i = 0; i < ranks.length; i++) {
-                cards.add(new Card(suit, ranks[i], values[i]));
+                cards.add(new Card(suit, ranks[i], values[i])); // Add card to the deck
             }
         }
-        shuffle();
+        shuffle(); // Shuffle the deck
     }
 
     public void shuffle() {
-        Collections.shuffle(cards);
+        Collections.shuffle(cards); // Shuffle the cards
     }
 
     public Card drawCard() {
-        return cards.remove(0);
+        return cards.remove(0); // Draw a card from the top of the deck
     }
 }
