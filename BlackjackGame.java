@@ -1,4 +1,3 @@
-// BlackjackGame.java
 import java.util.Scanner;
 
 public class BlackjackGame {
