@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Player {
-    private ArrayList<Card> hand;
-    private int score;
+    private ArrayList<Card> hand; // Player's hand of cards
+    private int score; // Player's score
 
     public Player() {
         hand = new ArrayList<>();
@@ -10,8 +10,8 @@ public class Player {
     }
 
     public void addCard(Card card) {
-        hand.add(card);
-        score += card.getValue();
+        hand.add(card); // Add card to hand
+        score += card.getValue(); // Add card value to score
     }
 
     public int getScore() {
@@ -19,12 +19,12 @@ public class Player {
     }
 
     public boolean isBusted() {
-        return score > 21;
+        return score > 21; // Check if score is over 21
     }
 
     public void resetHand() {
-        hand.clear();
-        score = 0;
+        hand.clear(); // Clear the hand
+        score = 0; // Reset the score
     }
 
     public ArrayList<Card> getHand() {
